@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Form with ARIA</title>
+</head>
+<body>
+    <form aria-labelledby="email-form">
+        <label id="email-label" for="email">Email address</label><br>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required aria-required="true" aria-describedby="email-label"><br>
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    <form aria-labelledby="quantity-form">
+        <label id="quantity-label" for="quantity">Quantity:</label><br>
+        <input type="number" id="quantity" name="quantity" min="1" max="100" value="1" aria-describedby="quantity-label"><br>
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    <form aria-labelledby="date-form">
+        <label id="date-label" for="date">Select a date:</label><br>
+        <input type="date" id="date" name="date" required aria-required="true" aria-describedby="date-label"><br>
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    <form aria-labelledby="range-form">
+        <label id="range-label" for="range">Select a range:</label><br>
+        <input type="range" id="range" name="range" min="0" max="100" value="50" aria-describedby="range-label"><br>
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    <form aria-labelledby="color-form">
+        <label id="color-label" for="color">Choose a color:</label><br>
+        <input type="color" id="color" name="color" value="#000000" aria-describedby="color-label"><br>
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    <form aria-labelledby="language-form">
+        <label id="language-label" for="options">What's your favorite programming language</label><br>
+        <select id="options" name="options" aria-describedby="language-label">
+            <option value="option1">HTML</option>
+            <option value="option2">Python</option>
+            <option value="option3">Java</option>
+            <option value="option4">Other</option>
+        </select><br>
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    <form aria-labelledby="expertise-form">
+        <p id="expertise-label">Select your level of expertise:</p>
+        <input type="radio" id="novice" name="expertise" value="NoviceLevel" aria-labelledby="novice-label">
+        <label id="novice-label" for="novice">Novice</label><br>
+
+        <input type="radio" id="beginner" name="expertise" value="BeginnerLevel" aria-labelledby="beginner-label">
+        <label id="beginner-label" for="beginner">Beginner</label><br>
+
+        <input type="radio" id="intermediate" name="expertise" value="IntermediateLevel" aria-labelledby="intermediate-label">
+        <label id="intermediate-label" for="intermediate">Intermediate</label><br>
+
+        <input type="radio" id="advanced" name="expertise" value="AdvancedLevel" aria-labelledby="advanced-label">
+        <label id="advanced-label" for="advanced">Advanced</label><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    <form aria-labelledby="platform-form">
+        <p id="platform-label">Preferred developmental platform:</p>
+        <input type="checkbox" id="web" name="platform" value="web" aria-labelledby="web-label">
+        <label id="web-label" for="web">Web</label><br>
+
+        <input type="checkbox" id="mobile" name="platform" value="mobile" aria-labelledby="mobile-label">
+        <label id="mobile-label" for="mobile">Mobile</label><br>
+
+        <input type="checkbox" id="desktop" name="platform" value="desktop" aria-labelledby="desktop-label">
+        <label id="desktop-label" for="desktop">Desktop</label>
+    </form>
+</body>
+</html>
